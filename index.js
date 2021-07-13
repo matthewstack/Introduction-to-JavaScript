@@ -173,9 +173,22 @@ HINT: Remember that the order in which we pass in our arguments matters when it 
 
 function game(user, computer){
   /*add your code here*/
+  var computer = Math.random();
+    if (computer < 0.33) {
+      return "Scissors";
+    }
+    if (computer < 0.66) {
+      return "Rock";
+    }
+    if (computer < 1) {
+      return "Paper";
+    }
+console.log(computer)
 }
 
-
+if (user === computer) {
+  return "It's a tie";
+}
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -188,9 +201,12 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(kilometers){
+  return kilometers / .621371;
 }
+console.log(miles(10));  
+  /*add your code here*/
+
 
 
 
@@ -202,9 +218,10 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-  /*add your code here*/
+function feet(cm){
+  return cm / 30.48;
 }
+console.log(feet(304.8))
 
 
 
