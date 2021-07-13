@@ -20,6 +20,10 @@ Do the following:
    HINT: no function required
 */
 
+var votingAge = 32;
+if (votingAge => 18); {
+console.log('True');
+}
 
 
 /*
@@ -33,8 +37,10 @@ Do the following:
    HINT: no function required
 */
 
-
-
+var x = 7;
+var y = 8
+var x = y + 6;
+console.log(x)
 
 
 /*
@@ -48,8 +54,8 @@ Do the following:
    HINT: look up the Number method
 */
 
-
-
+var randomString = "1999";
+console.log(Number(randomString));
 
 /*
 Task 1d - Multiply
