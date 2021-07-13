@@ -82,9 +82,9 @@ Do the following:
 */
 
 function dogYears(humanYears){
-  return humanYears / 7;
+  return humanYears * 7;
 }
-console.log(dogYears(70))
+console.log(dogYears(5))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -131,20 +131,23 @@ function hungryDog(dogWeight,dogYears){
       }
   	}
   
-  else if (dogYears <= 1){
-      if ((dogYears => 0.1667) && (dogYears <= 0.334)){
+  else { (dogYears < 1);
+      if ((dogYears => (2/12)) || (dogYears <= (4/12))){
         dogFood = dogWeight * 0.10;
         }
-     else if ((dogYears => 0.334) && (dogYears <= 0.583)){
+     else if ((dogYears > (4/12) ) && (dogYears <= 0.583)){
         dogFood = dogWeight * 0.05;
         }
      else if ((dogYears => 0.584) && (dogYears < 1)){
         dogFood = dogWeight * 0.04;
         }
-  	}
+  	  }
+
+      return dogFood;   
+  }
     
-    return dogFood;
-}
+    
+
 
 console.log(hungryDog(15, 1))
 
@@ -170,25 +173,35 @@ RULES OF THE GAME: Scissors beats Paper | Paper beats Rock | Rock beats Scissors
 
 HINT: Remember that the order in which we pass in our arguments matters when it comes to parameters
 */
+let computer = Math.random();
+if (computer <= 0.34) {
+  computer = "rock";
+}
+else if (computer <= 0.67) {
+  computer = "paper";
+}
+else if (computer > .67) {
+  computer = "scissors";
+}
 
 function game(user, computer){
-  /*add your code here*/
-  var computer = Math.random();
-    if (computer < 0.33) {
-      return "Scissors";
-    }
-    if (computer < 0.66) {
-      return "Rock";
-    }
-    if (computer < 1) {
-      return "Paper";
-    }
-console.log(computer)
+  if (user === computer) {
+    return "it's a tie";
+  }else if (user === "rock" && computer === "scissors"){
+    return "you win!";
+  }else if (user === "paper" && computer === "rock"){
+    return "you win!"
+  }else if (user === "scissors" && computer === "paper"){
+    return "you win!";
+  }else{
+    return "you lose!"
+  }
+
+
+console.log("task4", game('rock', computer));
 }
 
-if (user === computer) {
-  return "It's a tie";
-}
+
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -202,7 +215,7 @@ Using the miles function below do the following:
 */
 
 function miles(kilometers){
-  return kilometers / .621371;
+  return kilometers * .621371;
 }
 console.log(miles(10));  
   /*add your code here*/
@@ -259,22 +272,22 @@ Using the grade function below do the following:
 
 function grade(score){
   if (score > 89){
-  console.log("You got an A")
+    return "you got an A"
   }
   else if (score > 79){
-  console.log("You got a B")
+    return "you got a B"
   }
   else if (score > 69){
-  console.log("You got a C")
+    return "you got a C"
   }
   else if (score > 59){
-  console.log("You got a D")
+    return "you got a D"
   }
   else if (score < 60){
-  console.log("You got a F")
+    return "you got an F"
   }
 }
-grade(78);
+console.log(grade(78));
 
 
 
