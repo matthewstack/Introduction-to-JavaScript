@@ -115,41 +115,24 @@ NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.449
 */  
 
 function hungryDog(dogWeight,dogYears){
-	let dogFood;
-  if (dogYears => 1){
-    if (dogWeight <= 5){
-      dogFood = dogWeight * 0.05;
-      }
-    else if ((dogWeight => 6) && (dogWeight <= 10)){
-      dogFood = dogWeight * 0.04;
-      }
-    else if ((dogWeight => 11) && (dogWeight <= 15)){
-      dogFood = dogWeight * 0.03;
-      }    
-    else if (dogWeight > 15){
-      dogFood = dogWeight * 0.02;
-      }
-  	}
-  
-  else { (dogYears < 1);
-      if ((dogYears => (2/12)) || (dogYears <= (4/12))){
-        dogFood = dogWeight * 0.10;
-        }
-     else if ((dogYears > (4/12) ) && (dogYears <= 0.583)){
-        dogFood = dogWeight * 0.05;
-        }
-     else if ((dogYears => 0.584) && (dogYears < 1)){
-        dogFood = dogWeight * 0.04;
-        }
-  	  }
-
-      return dogFood;   
+  if (dogYears < 0.333){
+    return dogWeight * 0.1;
+  } else if (dogYears < 0.582){
+    return dogWeight * 0.05;
+  } else if (dogYears < 1){
+    return dogWeight * 0.04;
+  } else if (dogYears >= 1 && dogWeight < 6){
+    return dogWeight * 0.05;
+  } else if (dogYears >= 1 && dogWeight < 11){
+    return dogWeight * 0.04;
+  } else if (dogYears >= 1 && dogWeight <= 15){
+    return dogWeight * 0.03;
+  } else if (dogYears >= 1 && dogWeight > 15){
+    return dogWeight * 0.02;
   }
-    
-    
+}
 
-
-console.log(hungryDog(15, 1))
+  console.log(hungryDog(15, 1))
 
 
 
@@ -249,12 +232,10 @@ Using the annoyingSong function below do the following:
 */
 
 function annoyingSong(number){
-  while (number > 0) {
-   console.log(number + " " + "bottles of soda on the wall," + " " + number + " " + "bottles of soda, take one down pass it around" + " " + (number - 1) + " " + "bottles of soda on the wall")
-  number--;
+  for (let i = number; i > 0; i--) {
+   return i + " " + "bottles of soda on the wall," + " " + i + " " + "bottles of soda, take one down pass it around" + " " + (i - 1) + " " + "bottles of soda on the wall"
     }
   }
-  annoyingSong(99);
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Grade Calculator
